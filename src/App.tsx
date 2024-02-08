@@ -1,10 +1,20 @@
-function App() {
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Layout from "./container/Layout";
+import Cards from "./views/Dashboard/Cards";
+import Dashboard from "./views/Dashboard/Dashboard";
 
+function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  )
+    <Router>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Dashboard title="Hello" />} />
+          <Route path="/dashboard" element={<Dashboard title="Hello" />} />
+          <Route path=":slug" element={<Cards />} />
+        </Routes>
+      </Layout>
+    </Router>
+  );
 }
 
-export default App
+export default App;
