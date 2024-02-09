@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+// eslint-disable-next-line @typescript-eslint/no-var-requires, no-undef
+const withMT = require("@material-tailwind/react/utils/withMT");
+
+export default withMT({
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
@@ -7,5 +10,5 @@ export default {
     extend: {},
   },
   plugins: [],
-}
+})
 

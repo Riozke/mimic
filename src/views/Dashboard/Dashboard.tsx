@@ -1,15 +1,17 @@
 import React from "react";
+import { Filters } from "../../components/Sidebar/Filters";
 
 interface Props {
   title: string;
 }
 
-const Heading: React.FC<Props> = ({ title }) => {
+const Dashboard: React.FC<Props> = ({ title }) => {
+  console.log('Carga')
   return (
-    <>
-      <h1>{title}</h1>
-    </>
+    <div className="color:black">
+      <Filters />
+    </div>
   );
 };
 
-export default Heading;
+export default Dashboard;

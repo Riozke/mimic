@@ -1,6 +1,5 @@
 import React, { ReactNode } from "react";
-import Sidebar from "../components/Sidebar/Sidebar";
-import Header from "../components/Header/Header";
+import Navbar from "../components/Navbar/Navbar";
 
 interface LayoutProps {
   children: ReactNode;
@@ -8,12 +7,9 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="bg-background text-text-primary dark:bg-d-background dark:text-d-text-primary">
-      <Sidebar />
-      <div className="flex min-h-screen flex-col">
-        <Header />
-        <div>{children}</div>
-      </div>
+    <div className="flex flex-col h-screen">
+      <Navbar />
+      <div className="flex h-full w-screen">{children}</div>
     </div>
   );
 };
